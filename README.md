@@ -503,5 +503,64 @@ The process of creating this cheat sheet has provided me with a solid foundation
 
 For more details and the complete cheat sheet, visit my GitHub repository: [bintezahra14/object-detection-cheat-sheet](https://github.com/bintezahra14/object-detection-cheat-sheet)
 
+# Module 09: Advanced CNN Architectures and Object Detection & Recognition
+
+## Overview
+
+In this module, I explored advanced techniques in object detection, specifically focusing on the use of transfer learning with the Pascal VOC 207 dataset. Transfer learning allows leveraging pre-trained models to enhance the performance of object detection tasks, making it a powerful approach in computer vision.
+
+## L09: Object Detection using Transfer Learning and Pascal VOC 207 Dataset
+
+### Project Description
+
+The objective of this assignment was to implement an object detection model using transfer learning techniques on the Pascal VOC 207 dataset. This dataset contains a diverse set of images with annotations for various object classes, making it ideal for training and evaluating detection models.
+
+### Steps Undertaken
+
+1. **Dataset Preparation:**
+   - Downloaded and preprocessed the Pascal VOC 207 dataset, including splitting it into training, validation, and test sets.
+   - Converted the annotations to a format suitable for training object detection models.
+
+2. **Model Selection:**
+   - Chose a pre-trained model (e.g., Faster R-CNN or YOLO) from TensorFlow Hub for transfer learning.
+   - Analyzed the architecture of the selected model to understand its components and how they contribute to object detection.
+
+3. **Transfer Learning Implementation:**
+   - Loaded the pre-trained weights of the chosen model and fine-tuned the model on the Pascal VOC dataset.
+   - Adjusted hyperparameters, including learning rate and batch size, to optimize the training process.
+
+4. **Training and Evaluation:**
+   - Trained the model using the training dataset, monitoring its performance on the validation set.
+   - Evaluated the model on the test set, calculating metrics such as mean Average Precision (mAP) to assess its accuracy.
+
+5. **Results Visualization:**
+   - Visualized the detection results using bounding boxes overlaid on the original images to showcase the model's performance.
+
+## Reflection
+
+1. **Understanding Transfer Learning:**
+   - This assignment deepened my understanding of transfer learning and its significance in reducing training time and improving model accuracy by leveraging pre-trained models.
+
+2. **Practical Application:**
+   - Working with the Pascal VOC 207 dataset highlighted the importance of having diverse and well-annotated datasets for effective model training and evaluation in real-world applications.
+
+3. **Challenges Faced:**
+   - I encountered challenges in fine-tuning the model, particularly in adjusting hyperparameters to achieve optimal performance. This experience taught me the importance of experimentation and iteration in model training.
+
+4. **Visualization of Results:**
+   - Visualizing the detection results provided valuable insights into the strengths and weaknesses of the model, helping me understand areas for improvement.
+
+5. **Future Directions:**
+   - This project has inspired me to further explore advanced object detection techniques, such as ensemble methods and real-time detection systems, to enhance my knowledge and skills in computer vision.
+
+### Conclusion
+
+The journey through Module 09 has significantly enriched my understanding of advanced CNN architectures and object detection. Implementing transfer learning on the Pascal VOC 207 dataset has provided me with practical experience and valuable insights that I will carry forward in my future projects.
+
+---
+
+## GitHub Repository
+
+For more details and the complete implementation, visit my GitHub repository: [bintezahra14/object-detection-transfer-learning](https://github.com/bintezahra14/object-detection-transfer-learning)
 
 
