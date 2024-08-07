@@ -336,5 +336,172 @@ Overall, this module and workshop have significantly enhanced my understanding o
 
 For more details and the complete code, visit my GitHub repository: [bintezahra14/chihuahua-or-muffin](https://github.com/bintezahra14/chihuahua-or-muffin)
 
+# Module 07: Convolutional Neural Networks
+
+## Overview
+
+In this module, I delved into Convolutional Neural Networks (CNNs), learning about their architecture and their powerful capabilities in image classification tasks. The hands-on project involving the "Chihuahua or Muffin" classification allowed me to apply the theoretical knowledge gained throughout the module.
+
+## L07: Chihuahua or Muffin with CNN
+
+### Project Description
+
+The "Chihuahua or Muffin" project challenged me to create a CNN that distinguishes between images of Chihuahuas and muffins. This classification task presented an interesting challenge due to the visual similarities between the two categories.
+
+### Steps Undertaken
+
+1. **Data Preparation:**
+   - Collected and organized a dataset of images containing Chihuahuas and muffins, ensuring a balanced number of images for each category.
+   - Preprocessed the images by resizing them to a uniform dimension (e.g., 128x128 pixels) and normalizing the pixel values to the range [0, 1].
+
+2. **Model Construction:**
+   - Built a CNN model using Keras, incorporating:
+     - Multiple convolutional layers with ReLU activation to extract features.
+     - Pooling layers to downsample the feature maps.
+     - Fully connected layers for final classification output.
+   - Implemented dropout layers to prevent overfitting.
+
+3. **Training the Model:**
+   - Compiled the model using the Adam optimizer and categorical cross-entropy loss.
+   - Trained the model on the training dataset, monitoring its performance using a validation set.
+
+4. **Model Evaluation:**
+   - Evaluated the model using a test dataset and calculated performance metrics such as accuracy and confusion matrix.
+
+## A07 ITAI 1378 Manual CNN
+
+### Assignment Overview
+
+The "A07 ITAI 1378 Manual CNN" assignment involved manually implementing a CNN from scratch. This deepened my understanding of CNN mechanics and reinforced the concepts learned in the module.
+
+### Key Components of the Assignment
+
+1. **Understanding the Mathematical Foundations:**
+   - Reviewed the mathematical principles underlying convolution operations, activation functions, and pooling mechanisms.
+
+2. **Building CNN from Scratch:**
+   - Implemented a CNN using NumPy, focusing on the core functionalities of convolution, activation, and pooling layers.
+
+3. **Training and Backpropagation:**
+   - Developed the backpropagation algorithm to update weights and biases based on the loss function, enabling the network to learn from errors.
+
+### Reflection
+
+1. **Deepened Understanding:**
+   - Manually implementing a CNN enhanced my understanding of how CNNs function at a fundamental level. I gained insights into the significance of each layer and how they work together to classify images.
+
+2. **Challenges Faced:**
+   - Encountered challenges in efficiently implementing the convolution and backpropagation algorithms. Debugging the manual implementation required careful attention to detail, which significantly improved my problem-solving skills.
+
+3. **Real-World Relevance:**
+   - This module emphasized the practical applications of CNNs in various fields, including healthcare, autonomous vehicles, and security systems. Understanding the theory behind these networks prepares me for real-world challenges in computer vision.
+
+4. **Transferable Skills:**
+   - The skills acquired during this module—such as data preprocessing, model construction, and evaluation—are directly applicable to future projects involving deep learning and image classification.
+
+### Conclusion
+
+The journey through Module 07 has significantly enriched my understanding of Convolutional Neural Networks. The practical experiences from both the "Chihuahua or Muffin" project and the "Manual CNN" assignment have solidified my knowledge and prepared me for more advanced topics in deep learning and computer vision.
+
+---
+
+## GitHub Repository
+
+For more details and the complete code, visit my GitHub repository: [bintezahra14/convolutional-neural-networks](https://github.com/bintezahra14/convolutional-neural-networks)
+
+
+# Module 08: CNN Basic Architectures and Transfer Learning
+
+## Objective
+
+The primary goal of this assignment is to consolidate and articulate key concepts, methodologies, and tools pertinent to object detection in a succinct and accessible manner. This will be achieved through the creation of a cheat sheet that serves as a quick reference guide for object detection tasks.
+
+## Research and Content Collection
+
+### Key Concepts in Object Detection
+
+- **Bounding Boxes:** Rectangular boxes used to define the location of an object within an image.
+- **Annotations:** Labels assigned to objects in an image, often used for training models.
+- **Confidence Scores:** Probabilities assigned by the model indicating the likelihood that a detected object belongs to a specific class.
+- **Intersection over Union (IoU):** A metric used to evaluate the accuracy of an object detector. It is calculated as the area of overlap between the predicted bounding box and the ground truth box divided by the area of their union.
+
+### Common Object Detection Algorithms
+
+1. **R-CNN:** Region-based Convolutional Neural Networks that use selective search to identify regions in an image.
+2. **Fast R-CNN:** An improvement over R-CNN that processes the entire image with a single CNN and then classifies the regions.
+3. **Faster R-CNN:** Further optimizes Fast R-CNN by introducing a Region Proposal Network (RPN) to propose regions.
+4. **SSD (Single Shot MultiBox Detector):** A real-time object detection algorithm that detects objects in a single pass through the network.
+5. **YOLO (You Only Look Once):** A fast object detection system that predicts bounding boxes and class probabilities in a single evaluation.
+
+### Tools and Libraries
+
+- **TensorFlow:** A popular open-source library for machine learning that supports various object detection models.
+- **Keras:** A high-level neural networks API that runs on top of TensorFlow, making it easier to build and train models.
+- **OpenCV:** An open-source computer vision library that provides tools for image processing and analysis.
+
+## Cheat Sheet Creation
+
+### Layout and Design
+
+- **Visual Accessibility:** The cheat sheet will be organized with clear headings and subheadings for easy navigation.
+- **Definitions and Formulae:** Key terms will be defined, and relevant formulas (e.g., IoU) will be included.
+- **Diagrams and Flowcharts:** Visual representations of algorithms and processes will help illustrate concepts clearly.
+
+### Object Detection Workflow
+
+- **Steps Involved in Object Detection:**
+  1. Data collection and annotation.
+  2. Preprocessing images (resizing, normalization).
+  3. Choosing an object detection model.
+  4. Training the model on the annotated dataset.
+  5. Evaluating the model using metrics like IoU and precision.
+  6. Deploying the model for inference.
+
+### Common Challenges and Troubleshooting Tips
+
+- **Challenge:** Poor model performance.
+  - **Tip:** Ensure high-quality and diverse training data.
+- **Challenge:** Overfitting.
+  - **Tip:** Implement data augmentation and regularization techniques.
+
+## Tool and Library Overview
+
+- **Installation Instructions:** Provide step-by-step instructions for installing TensorFlow, Keras, and OpenCV.
+- **Basic Usage Examples:** Include code snippets demonstrating basic functionalities of each library.
+- **Links to Documentation:** Direct users to official documentation for further exploration.
+
+## Additional Resources
+
+- **Books:**
+  - "Deep Learning for Computer Vision with Python" by Adrian Rosebrock.
+- **Online Tutorials:**
+  - TensorFlow Object Detection API tutorial.
+- **Websites:**
+  - [Towards Data Science](https://towardsdatascience.com) for articles and guides on object detection.
+
+## Reflection
+
+1. **Consolidation of Knowledge:**
+   - This assignment has allowed me to consolidate my understanding of object detection concepts and methodologies. The research phase helped me delve into various algorithms and their applications.
+
+2. **Clarity and Organization:**
+   - Creating a cheat sheet has reinforced the importance of clear and organized presentation of information. It is crucial to make complex concepts easily digestible.
+
+3. **Practical Application:**
+   - The practical nature of this assignment has highlighted the significance of object detection in real-world applications, such as autonomous vehicles and security systems.
+
+4. **Feedback and Improvement:**
+   - Although peer review was not applicable, I plan to seek feedback from instructors and peers in future projects to enhance the quality of my work.
+
+### Conclusion
+
+The process of creating this cheat sheet has provided me with a solid foundation in object detection, equipping me with the knowledge and tools necessary for future projects in computer vision and machine learning.
+
+---
+
+## GitHub Repository
+
+For more details and the complete cheat sheet, visit my GitHub repository: [bintezahra14/object-detection-cheat-sheet](https://github.com/bintezahra14/object-detection-cheat-sheet)
+
 
 
