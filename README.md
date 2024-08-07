@@ -807,4 +807,102 @@ The model achieved an accuracy of ~82% after fine-tuning.
 - **Pre-trained Model**: Used MobileNetV2 to reduce training time and resource usage.
 - **Regularization Techniques**: Employed dropout and additional dense layers to prevent overfitting while maintaining efficiency.
 
+# FINAL EXAM
+# AI Agent for Flappy Bird
 
+## Project Overview
+This project aims to train an AI agent to play Flappy Bird using computer vision and reinforcement learning. The agent learns to navigate the game by interacting with the environment, maximizing its score while avoiding obstacles.
+
+## Environment Setup
+
+### Game Environment
+Flappy Bird is a simple 2D side-scrolling game where the player controls a bird, attempting to fly between columns of green pipes without hitting them. The bird is affected by gravity, causing it to fall unless the player taps the screen to flap. The scoring system increases the score by one point for each set of pipes successfully passed.
+
+### Libraries and Tools
+- **PyGame**: A library for creating 2D games in Python, used to recreate the Flappy Bird environment.
+- **OpenAI Gym**: A toolkit for developing and comparing reinforcement learning algorithms, providing a standard API for interacting with the game environment.
+
+### State Representation
+The game state is represented by frames captured at each time step, including the bird's position, velocity, and the positions of the nearest pipes. The action space consists of two actions: flap (to ascend) or do nothing.
+
+## Pre-trained Model Usage
+
+### Transfer Learning
+Transfer learning is used to leverage a pre-trained model, reducing training time and improving performance. This approach allows the model to utilize learned features from related tasks.
+
+### Model Choice
+I selected **MobileNetV2** for its efficiency and performance in image classification tasks. The convolutional layers of the model are used to extract features from game frames, which are then fed into the reinforcement learning algorithm. 
+
+## Reinforcement Learning Implementation
+
+### Basics
+- **States**: Processed game frames representing the environment.
+- **Actions**: Possible moves the agent can make (flap or do nothing).
+- **Rewards**: Feedback from the environment, such as score increments or penalties.
+- **Policies**: Strategies the agent uses to decide actions based on states.
+
+### Algorithm Choice
+I implemented a **Deep Q-Network (DQN)** algorithm, which combines Q-learning with deep neural networks to handle high-dimensional input spaces. Key components include:
+- Q-network architecture for approximating the Q-value function.
+- Replay memory for training stability.
+- Target network for stable target values during training.
+
+### Exploration-Exploitation
+An epsilon-greedy policy was used to balance exploration and exploitation. The agent explores with a probability ε and exploits with a probability 1-ε, gradually decreasing ε over time.
+
+### Experience Replay
+I implemented experience replay by storing experiences in a replay buffer and sampling mini-batches for training, improving stability and efficiency.
+
+## Model Training
+
+### Training Process
+1. Initialize the Q-network and target network.
+2. Set up replay memory.
+3. For each episode:
+   - Start the game and initialize the state.
+   - For each time step:
+     - Select an action using the epsilon-greedy policy.
+     - Execute the action and observe the reward and next state.
+     - Store the experience in replay memory.
+     - Sample a mini-batch from replay memory.
+     - Perform a gradient descent step on the loss derived from the Bellman equation.
+     - Update the target network periodically.
+
+### Hyperparameters
+I tuned hyperparameters such as learning rate, discount factor (γ), epsilon decay rate, mini-batch size, and replay memory size using grid search.
+
+### Handling Training Issues
+- **Catastrophic Forgetting**: Addressed using target network updates and replay memory.
+- **Reward Sparsity**: Implemented reward shaping for more frequent feedback.
+
+### Performance Evaluation
+During training, I tracked average rewards per episode, loss values, and Q-values.
+
+## Testing and Evaluation
+
+### Testing Strategy
+I evaluated the agent's performance over multiple episodes, using metrics like average score, survival time, and the number of pipes passed.
+
+### Result Interpretation
+I compared the agent's performance against a random policy and a heuristic-based policy. Visualization tools were used to plot learning curves and analyze decision-making patterns.
+
+## Reflections
+
+### Learning Experience
+Throughout this project, I gained insights into reinforcement learning, transfer learning, and the challenges of training AI agents in dynamic environments.
+
+### Challenges Faced
+I encountered challenges such as ensuring effective feature extraction from the pre-trained model and balancing exploration and exploitation during training.
+
+### Future Improvements
+Future work may involve exploring advanced reinforcement learning algorithms (e.g., Double DQN, Dueling DQN), utilizing recurrent neural networks for state representation, and experimenting with different reward structures.
+
+## Conclusion
+This project provided a comprehensive understanding of training an AI agent using computer vision and reinforcement learning techniques. The agent successfully learns to play Flappy Bird, demonstrating the effectiveness of these approaches.
+
+## References
+- [PyGame Documentation](https://www.pygame.org/docs/)
+- [OpenAI Gym Documentation](https://gym.openai.com/docs/)
+- [MobileNetV2 Research Paper](https://arxiv.org/abs/1801.04381)
+
+ 
