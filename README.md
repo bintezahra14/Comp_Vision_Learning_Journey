@@ -1,6 +1,6 @@
 # Comp_Vision_Learning_Journey
 A comprehensive portfolio that showcases my learning journey throughout the course
-# Historical Timeline of Computer Vision
+# Module 1: Historical Timeline of Computer Vision
 
 ## 1960s: The Dawn of Computer Vision
 - **1966**: The MIT AI Lab's Summer Vision Project aimed to use computers to recognize objects and understand scenes, marking the beginning of computer vision research.
