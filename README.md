@@ -186,7 +186,155 @@ This journey wasn’t just about making pretty pictures. These techniques are us
 ### Conclusion
 Overall, this quest into the fundamentals of image processing was incredibly rewarding. It gave me a deeper understanding of how techniques like histogram equalization, smoothing, and sharpening can dramatically enhance image quality. Each technique taught me valuable lessons about balance, subtlety, and the importance of non-destructive editing. Whether it is for photography, industrial applications, or medical imaging, these foundational techniques are essential tools for anyone working with images.
 
+# Module 05: Machine Learning for Computer Vision
 
+## Image Classification with SVM - Support Vector Machine Learning Lab
+
+### Lab Experience Reflection
+
+In this lab session, I explored the use of Support Vector Machines (SVM) for image classification. SVM is a powerful supervised learning algorithm often used for classification tasks. Here’s a breakdown of what I did and learned during the lab:
+
+### What I Did
+
+1. **Dataset Preparation:**
+   - I used the CIFAR-10 dataset, which consists of 60,000 32x32 color images in 10 different classes, with 6,000 images per class. The dataset is divided into 50,000 training images and 10,000 testing images.
+
+2. **Data Preprocessing:**
+   - Loaded the CIFAR-10 dataset and performed data normalization to scale the pixel values to the range [0, 1].
+   - Flattened the images to convert the 32x32x3 pixel arrays into a single 1-dimensional array with 3,072 elements.
+
+3. **Feature Extraction:**
+   - Extracted features from the images using techniques like Histogram of Oriented Gradients (HOG) to capture essential information while reducing the dimensionality of the data.
+
+4. **Model Training:**
+   - Implemented an SVM classifier using the `scikit-learn` library.
+   - Trained the SVM model on the training data with different kernel functions (linear, polynomial, RBF) to see which one performed best.
+
+5. **Model Evaluation:**
+   - Evaluated the trained SVM model on the test data.
+   - Computed metrics such as accuracy, precision, recall, and F1-score to assess the performance of the classifier.
+
+### What I Learned
+
+1. **Understanding SVM:**
+   - Learned the fundamental principles of SVM, including the concepts of hyperplanes, support vectors, and margins.
+   - Understood how SVM aims to find the optimal hyperplane that maximizes the margin between different classes in the feature space.
+
+2. **Kernel Functions:**
+   - Gained insight into different kernel functions (linear, polynomial, RBF) and their roles in transforming the input space to make the data linearly separable.
+   - Discovered that the RBF kernel often performs well for complex datasets due to its ability to handle non-linear relationships.
+
+3. **Challenges and Solutions:**
+   - Faced challenges with computational efficiency due to the high dimensionality of the image data.
+   - Learned to optimize the SVM model by tuning hyperparameters such as the regularization parameter (C) and the kernel parameters (gamma).
+
+### Reflection
+
+This lab session provided a hands-on experience with SVM for image classification, highlighting both its strengths and limitations. The CIFAR-10 dataset offered a rich and diverse set of images, making it an excellent choice for experimenting with different machine learning techniques. 
+
+Through this exercise, I learned the importance of feature extraction in reducing the dimensionality of image data and improving model performance. The choice of kernel functions significantly impacts the classifier's ability to generalize from the training data to unseen test data.
+
+One of the key takeaways from this lab was the iterative process of model tuning and evaluation. By experimenting with different hyperparameters and kernel functions, I was able to achieve a better understanding of how SVM works and how to adapt it to various datasets.
+
+Overall, this lab experience enhanced my knowledge of machine learning techniques for computer vision and provided practical skills that will be invaluable in future projects. The journey of training and optimizing an SVM model for image classification was challenging but highly rewarding.
+
+---
+
+## GitHub Repository
+
+For more details and the complete code, visit my GitHub repository: [bintezahra14/image-classification-svm](https://github.com/bintezahra14/image-classification-svm)
+
+# Module 06: ITAI 1378 Basics of Neural Networks
+
+## A06 TensorFlow Playground Presentation
+
+### Overview
+
+In this module, I delved into the basics of neural networks using TensorFlow Playground, an interactive visualization tool that helps in understanding how neural networks operate. This hands-on experience was aimed at grasping the fundamental concepts of neural networks, including layers, activation functions, and how these components work together to perform complex tasks.
+
+### Insights and Reflection
+
+Using TensorFlow Playground provided a visual and intuitive way to see how neural networks learn and make predictions. Here are some key insights and reflections from the experience:
+
+1. **Understanding Neural Networks:**
+   - Neural networks consist of layers of nodes (neurons), each layer transforming the input data through weighted connections.
+   - The first layer (input layer) takes the input features, while the final layer (output layer) provides the predictions.
+   - Hidden layers between the input and output layers help in learning complex patterns and representations.
+
+2. **Activation Functions:**
+   - Activation functions introduce non-linearity into the network, enabling it to learn and represent more complex functions.
+   - Common activation functions include ReLU (Rectified Linear Unit), Sigmoid, and Tanh.
+   - Observing the effect of different activation functions on the learning process was enlightening, as it showed how they influence the convergence and accuracy of the model.
+
+3. **Training and Loss Functions:**
+   - Training a neural network involves adjusting the weights using backpropagation to minimize the loss function.
+   - The loss function measures the difference between the predicted and actual values. Common loss functions include Mean Squared Error (MSE) for regression tasks and Cross-Entropy for classification tasks.
+   - Visualizing the loss landscape and how the network learns to minimize it was a crucial part of understanding the training process.
+
+4. **Overfitting and Regularization:**
+   - Overfitting occurs when the model learns the training data too well, including the noise, which negatively impacts its performance on unseen data.
+   - Techniques like dropout (randomly setting some neurons to zero during training) and L2 regularization (penalizing large weights) help in preventing overfitting.
+   - Experimenting with these techniques on TensorFlow Playground highlighted their importance in building robust models.
+
+5. **Learning Rate and Optimization:**
+   - The learning rate controls how much the model's weights are updated with each iteration.
+   - Choosing an appropriate learning rate is crucial; too high can cause the model to converge too quickly to a suboptimal solution, while too low can make the training process very slow.
+   - Observing the impact of different learning rates on the training process provided valuable insights into optimization.
+
+## Lab 06: Chihuahua or Muffin Workshop
+
+### Lab Experience Reflection
+
+This lab involved a fun and practical exercise known as the "Chihuahua or Muffin" challenge, where I used neural networks to classify images as either a Chihuahua dog or a muffin. The goal was to understand the challenges of image classification and the importance of neural networks in tackling these challenges.
+
+### What I Did
+
+1. **Data Collection:**
+   - Collected images of Chihuahuas and muffins from an online dataset. This dataset provided a good mix of both categories, which are notoriously difficult to distinguish due to their visual similarities.
+
+2. **Data Preprocessing:**
+   - Preprocessed the images by resizing them to a standard size, normalizing the pixel values, and converting them into a format suitable for training a neural network.
+
+3. **Building the Neural Network:**
+   - Used TensorFlow and Keras to build a Convolutional Neural Network (CNN) tailored for image classification.
+   - The CNN architecture included several convolutional layers, activation functions, pooling layers, and fully connected layers.
+
+4. **Training the Model:**
+   - Trained the CNN model on the preprocessed dataset, using techniques like data augmentation to enhance the diversity of the training data.
+   - Monitored the training process by tracking metrics like accuracy and loss on both the training and validation datasets.
+
+5. **Evaluating the Model:**
+   - Evaluated the trained model on a separate test dataset to assess its performance.
+   - Used confusion matrices and classification reports to understand the model’s strengths and weaknesses.
+
+### What I Learned
+
+1. **Image Classification Challenges:**
+   - The "Chihuahua or Muffin" challenge highlighted the difficulty of distinguishing between visually similar objects, emphasizing the importance of advanced image processing techniques.
+
+2. **CNN Architecture:**
+   - Learned about the different components of CNNs, including convolutional layers that extract features, pooling layers that reduce dimensionality, and fully connected layers that perform the final classification.
+   - Understood how the depth and complexity of the network affect its ability to learn and generalize from the data.
+
+3. **Data Augmentation:**
+   - Realized the importance of data augmentation in enhancing the robustness of the model by artificially increasing the diversity of the training data.
+   - Techniques like rotation, flipping, and zooming helped in making the model more resilient to variations in the input data.
+
+4. **Model Evaluation:**
+   - Learned to evaluate the model's performance using metrics like accuracy, precision, recall, and F1-score.
+   - Identified the significance of using confusion matrices to get a detailed view of the model’s performance on different classes.
+
+### Reflection
+
+This workshop was an excellent opportunity to apply the theoretical knowledge of neural networks to a practical and engaging problem. The experience reinforced my understanding of CNNs and their application in image classification tasks. The challenge of distinguishing between Chihuahuas and muffins underscored the power and complexity of neural networks in handling real-world classification problems.
+
+Overall, this module and workshop have significantly enhanced my understanding of neural networks, from the basics to their practical applications in computer vision. I feel more confident in using TensorFlow and Keras to build and train neural networks for various tasks, and I look forward to exploring more advanced topics in this field.
+
+---
+
+## GitHub Repository
+
+For more details and the complete code, visit my GitHub repository: [bintezahra14/chihuahua-or-muffin](https://github.com/bintezahra14/chihuahua-or-muffin)
 
 
 
